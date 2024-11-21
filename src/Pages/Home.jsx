@@ -3,6 +3,7 @@ import SolarSystem from "./Home/SolarSystem";
 import { useContext } from "react";
 import { SolarContext } from "../Utils/SolarContext";
 import Navbar from "./Components/Navbar";
+import DataTable from "./Home/DataTable";
 
 const Home = () => {
   const { earthOrbitScale, setEarthOrbitScale } = useContext(SolarContext);
@@ -23,27 +24,39 @@ const Home = () => {
           </div>
         </div>
         <div className="w-11/12 my-12 mx-auto">
-          <div>
-            <h3 className="font-semibold text-3xl text-center">Set Speed</h3>
-            <p className="font-extralight text-xl text-center">current multiplier {earthOrbitScale}</p>
+          <h3 className="font-semibold text-3xl text-center">Control System</h3>
+          <div className="my-12 card gap-12 items-center bg-base-300 md:w-10/12 lg:w-8/12 mx-auto p-12">
+            <h3 className="card-title">
+              Current Orbit Period Multiplier: <span className="text-accent">{earthOrbitScale}</span> seconds
+            </h3>
+            <div className="w-full mx-auto">
+              <input
+                type="range"
+                min={0}
+                max={100}
+                className="range range-primary"
+                value={earthOrbitScale}
+                onInput={(e) => {
+                  setEarthOrbitScale(Number(e.target.value));
+                }}
+                onChange={(e) => {
+                  setEarthOrbitScale(Number(e.target.value));
+                }}
+                step={1}
+              />
+              <div className="flex w-full justify-between px-2 text-xs">
+                <span>0</span>
+                <span>25</span>
+                <span>50</span>
+                <span>75</span>
+                <span>100</span>
+              </div>
+            </div>
           </div>
-          <div className="md:w-8/12 lg:5/12 my-12 mx-auto">
-            <input
-              type="range"
-              min={1}
-              max={100}
-              className="range range-primary"
-              value={earthOrbitScale}
-              onInput={(e)=>{setEarthOrbitScale(Number(e.target.value))}}
-              onChange={(e)=>{setEarthOrbitScale(Number(e.target.value))}}
-              step={1}
-            />
-            <div className="flex w-full justify-between px-2 text-xs">
-              <span>1</span>
-              <span>25</span>
-              <span>50</span>
-              <span>75</span>
-              <span>100</span>
+          <div className="card p-6 gap-6 bg-base-300 mx-auto w-fit">
+            <h3 className="card-title">Scaling Table</h3>
+            <div className="border border-base-content rounded p-1">
+              <DataTable />
             </div>
           </div>
         </div>

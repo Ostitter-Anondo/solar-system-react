@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { SolarContext } from "../../Utils/SolarContext";
 
-const DataTable = () => {
+const DataTableOrbit = () => {
   const { earthOrbitScale } = useContext(SolarContext);
   return (
     <div>
@@ -60,4 +60,4 @@ const DataTable = () => {
   );
 };
 
-export default DataTable;
+export default DataTableOrbit;

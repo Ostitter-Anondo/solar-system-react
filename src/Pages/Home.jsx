@@ -3,7 +3,7 @@ import SolarSystem from "./Home/SolarSystem";
 import { useContext } from "react";
 import { SolarContext } from "../Utils/SolarContext";
 import Navbar from "./Components/Navbar";
-import DataTable from "./Home/DataTable";
+import DataTableOrbit from "./Home/DataTableOrbit";
 
 const Home = () => {
   const { earthOrbitScale, setEarthOrbitScale } = useContext(SolarContext);
@@ -54,9 +54,9 @@ const Home = () => {
             </div>
           </div>
           <div className="card p-6 gap-6 bg-base-300 mx-auto w-fit">
-            <h3 className="card-title">Scaling Table</h3>
+            <h3 className="card-title">Orbit Scaling Table</h3>
             <div className="border border-base-content rounded p-1">
-              <DataTable />
+              <DataTableOrbit />
             </div>
           </div>
         </div>

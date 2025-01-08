@@ -1,8 +1,21 @@
-# React + Vite
+# Basic React Interactive Solar System Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Solaris: A simple React based interactive solar system orbit demo
 
-Currently, two official plugins are available:
+This project is an evolution of my previously made solar system css project meant to showcase my evolving web development skills
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Demo
+
+[Project Live Demo](https://solar-system-ostitter-anondo.vercel.app/)
+
+## Key Features
+
+- simple React JS based website
+- tailwind + daisyui + pure CSS styling
+
+## Packages Used
+
+- react-hot-toast
+- react-icons
+- react-helmet-async
+- react-router-dom
